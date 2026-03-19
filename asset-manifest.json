@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.65a3b39d.css",
-    "main.js": "/portfolio/static/js/main.1f7d772a.js",
+    "main.js": "/portfolio/static/js/main.a8baf23e.js",
     "static/js/453.612f53fa.chunk.js": "/portfolio/static/js/453.612f53fa.chunk.js",
     "static/media/trailer_TakingRoot.mp4": "/portfolio/static/media/trailer_TakingRoot.b6bd73e9f8b5581e36f7.mp4",
     "static/media/GifPerspectiveInsertSmall.gif": "/portfolio/static/media/GifPerspectiveInsertSmall.4c285a1c81a695a21de3.gif",
@@ -43,11 +43,11 @@
     "static/media/thumb_TBA.png": "/portfolio/static/media/thumb_TBA.110baf2ded2da7b53cf7.png",
     "index.html": "/portfolio/index.html",
     "main.65a3b39d.css.map": "/portfolio/static/css/main.65a3b39d.css.map",
-    "main.1f7d772a.js.map": "/portfolio/static/js/main.1f7d772a.js.map",
+    "main.a8baf23e.js.map": "/portfolio/static/js/main.a8baf23e.js.map",
     "453.612f53fa.chunk.js.map": "/portfolio/static/js/453.612f53fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65a3b39d.css",
-    "static/js/main.1f7d772a.js"
+    "static/js/main.a8baf23e.js"
   ]
 }
