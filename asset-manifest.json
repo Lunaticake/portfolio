@@ -1,16 +1,20 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.f5dc7c13.css",
-    "main.js": "/portfolio/static/js/main.8e29e904.js",
+    "main.js": "/portfolio/static/js/main.1f7d772a.js",
     "static/js/453.612f53fa.chunk.js": "/portfolio/static/js/453.612f53fa.chunk.js",
     "static/media/trailer_TakingRoot.mp4": "/portfolio/static/media/trailer_TakingRoot.b6bd73e9f8b5581e36f7.mp4",
+    "static/media/GifPerspectiveInsertSmall.gif": "/portfolio/static/media/GifPerspectiveInsertSmall.4c285a1c81a695a21de3.gif",
+    "static/media/GifStaircaseRotate.gif": "/portfolio/static/media/GifStaircaseRotate.da75850f6709de5c9ce5.gif",
     "static/media/trailer_Flipside.mp4": "/portfolio/static/media/trailer_Flipside.cd715b96df8c89864efd.mp4",
     "static/media/trailer_Adventurer.mp4": "/portfolio/static/media/trailer_Adventurer.8392f998b976c3888bb8.mp4",
     "static/media/trailer_TowAR.mp4": "/portfolio/static/media/trailer_TowAR.cd3f441e334ce1b7d77d.mp4",
     "static/media/trailer_Golfking.mp4": "/portfolio/static/media/trailer_Golfking.f4afe4de3b68e6d78e38.mp4",
     "static/media/trailer_Branded.mp4": "/portfolio/static/media/trailer_Branded.f4ac264e91261a84f31f.mp4",
+    "static/media/GifTextureMove.gif": "/portfolio/static/media/GifTextureMove.4d4075a5478b6b2f11b8.gif",
     "static/media/Thumbnail.png": "/portfolio/static/media/Thumbnail.04f1f39143b38b5388b6.png",
     "static/media/trailer_Vibes.mp4": "/portfolio/static/media/trailer_Vibes.d71468d22731956abb75.mp4",
+    "static/media/GifCamSwitch.gif": "/portfolio/static/media/GifCamSwitch.d3c26684c5f89082e1c2.gif",
     "static/media/Screenshot (15).png": "/portfolio/static/media/Screenshot (15).7e1dade236361057e15c.png",
     "static/media/Screenshot (19).png": "/portfolio/static/media/Screenshot (19).e32945e450534d8b2f9c.png",
     "static/media/Screenshot (16).png": "/portfolio/static/media/Screenshot (16).5140aedbfa1cbd829f00.png",
@@ -39,11 +43,11 @@
     "static/media/thumb_TBA.png": "/portfolio/static/media/thumb_TBA.110baf2ded2da7b53cf7.png",
     "index.html": "/portfolio/index.html",
     "main.f5dc7c13.css.map": "/portfolio/static/css/main.f5dc7c13.css.map",
-    "main.8e29e904.js.map": "/portfolio/static/js/main.8e29e904.js.map",
+    "main.1f7d772a.js.map": "/portfolio/static/js/main.1f7d772a.js.map",
     "453.612f53fa.chunk.js.map": "/portfolio/static/js/453.612f53fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f5dc7c13.css",
-    "static/js/main.8e29e904.js"
+    "static/js/main.1f7d772a.js"
   ]
 }
