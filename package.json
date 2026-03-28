@@ -1,8 +1,8 @@
 {
-  "name": "react-portfolio-template",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yujisatojr.github.io/react-portfolio-template",
+  "homepage": "https://Lunaticake.github.io/portfolio",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -21,6 +21,7 @@
     "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-markdown": "^10.1.0",
     "react-scripts": "5.0.1",
     "react-vertical-timeline-component": "^3.6.0",
     "sass": "^1.77.4",
@@ -54,6 +55,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-vertical-timeline-component": "^3.3.6"
+    "@types/react-vertical-timeline-component": "^3.3.6",
+    "gh-pages": "^6.3.0"
   }
 }

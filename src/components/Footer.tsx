@@ -6,11 +6,8 @@ import '../assets/styles/Footer.scss'
 function Footer() {
   return (
     <footer>
-      <div>
-        <a href="https://github.com/yujisatojr" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-        <a href="https://www.linkedin.com/in/yujisato/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
-      </div>
-      <p>A portfolio designed & built by <a href="https://github.com/yujisatojr/react-portfolio-template" target="_blank" rel="noreferrer">Yuji Sato</a> with 💜</p>
+      <p>Based on a design by <a href="https://github.com/yujisatojr/react-portfolio-template" target="_blank" rel="noreferrer">Yuji Sato</a></p>
+      <p>Tab icon created by <a href="https://www.flaticon.com/free-icons/game-boy-advance" title="game boy advance icons" target="_blank" rel="noreferrer">Creative Avenue - Flaticon</a></p>
     </footer>
   );
 }
