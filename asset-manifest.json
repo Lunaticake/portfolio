@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.c29acd3e.css",
-    "main.js": "/portfolio/static/js/main.a8baf23e.js",
+    "main.css": "/portfolio/static/css/main.4cbec5b4.css",
+    "main.js": "/portfolio/static/js/main.c846ca82.js",
     "static/js/453.612f53fa.chunk.js": "/portfolio/static/js/453.612f53fa.chunk.js",
     "static/media/trailer_TakingRoot.mp4": "/portfolio/static/media/trailer_TakingRoot.b6bd73e9f8b5581e36f7.mp4",
     "static/media/GifPerspectiveInsertSmall.gif": "/portfolio/static/media/GifPerspectiveInsertSmall.4c285a1c81a695a21de3.gif",
@@ -42,12 +42,12 @@
     "static/media/Gameplay_1.png": "/portfolio/static/media/Gameplay_1.fc913afe8946acba65c8.png",
     "static/media/thumb_TBA.png": "/portfolio/static/media/thumb_TBA.110baf2ded2da7b53cf7.png",
     "index.html": "/portfolio/index.html",
-    "main.c29acd3e.css.map": "/portfolio/static/css/main.c29acd3e.css.map",
-    "main.a8baf23e.js.map": "/portfolio/static/js/main.a8baf23e.js.map",
+    "main.4cbec5b4.css.map": "/portfolio/static/css/main.4cbec5b4.css.map",
+    "main.c846ca82.js.map": "/portfolio/static/js/main.c846ca82.js.map",
     "453.612f53fa.chunk.js.map": "/portfolio/static/js/453.612f53fa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c29acd3e.css",
-    "static/js/main.a8baf23e.js"
+    "static/css/main.4cbec5b4.css",
+    "static/js/main.c846ca82.js"
   ]
 }
