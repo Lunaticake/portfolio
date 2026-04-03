@@ -54,9 +54,15 @@
     color: #050f0b;
   }
 
-  button:hover {
+  button:hover:not(:disabled) {
     background-color: #5000ca;
     color: white;
+  }
+
+  button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    opacity: 0.7;
   }
 
   .MuiOutlinedInput-root {
@@ -95,4 +101,37 @@ form {
 .body-form {
   width: 100% !important;
   margin-bottom: 15px !important;
+}
+
+// Dark mode styles for contact form
+.dark-mode .contact-form {
+  button {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  button:hover:not(:disabled) {
+    background-color: #5000ca;
+    color: white;
+  }
+
+  button:disabled {
+    background-color: #555555;
+    color: #aaaaaa;
+    opacity: 0.7;
+  }
+
+  .MuiOutlinedInput-root {
+    background-color: #333333;
+    border-color: #555555;
+  }
+
+  .MuiInputBase-input {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  .MuiInputLabel-root {
+    color: #cccccc !important;
+  }
 }

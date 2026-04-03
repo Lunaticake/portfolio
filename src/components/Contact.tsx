@@ -18,18 +18,19 @@ function Contact() {
   const [emailError, setEmailError] = useState<boolean>(false);
   const [messageError, setMessageError] = useState<boolean>(false);
   const [isSending, setIsSending] = useState<boolean>(false);
+  const [cooldownTime, setCooldownTime] = useState<number>(0);
 
   const form = useRef<HTMLFormElement>();
 
-  // Debug: Check if environment variables are loaded
+  // Cooldown timer effect
   React.useEffect(() => {
-    if (!process.env.REACT_APP_EMAILJS_PUBLIC_KEY) {
-      console.error('REACT_APP_EMAILJS_PUBLIC_KEY is undefined!');
-      console.log('All env vars:', Object.keys(process.env).filter(k => k.includes('EMAILJS')));
-    } else {
-      console.log('EmailJS Public Key loaded successfully');
+    if (cooldownTime > 0) {
+      const timer = setTimeout(() => {
+        setCooldownTime(cooldownTime - 1);
+      }, 1000);
+      return () => clearTimeout(timer);
     }
-  }, []);
+  }, [cooldownTime]);
 
   const sendEmail = (e: any) => {
   e.preventDefault();
@@ -39,7 +40,7 @@ function Contact() {
     return;
   }
 
-  if (isSending) return;
+  if (isSending || cooldownTime > 0) return;
 
   const isNameEmpty = name === '';
   const isEmailEmpty = email === '';
@@ -51,7 +52,7 @@ function Contact() {
 
   if (isNameEmpty || isEmailEmpty || isMessageEmpty) return;
 
-  if (!email.match(/^\S+@\S+\.\S+$/)) {
+  if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
     setEmailError(true);
     return;
   }
@@ -79,13 +80,13 @@ function Contact() {
         setMessage('');
 
         const EMAIL_COOLDOWN_SECONDS = 5;
-        setTimeout(() => {
-          setIsSending(false);
-        }, EMAIL_COOLDOWN_SECONDS * 1000);
+        setCooldownTime(EMAIL_COOLDOWN_SECONDS);
+        setIsSending(false);
       },
       (error) => {
         console.error(error);
         alert('Failed to send message.');
+        setIsSending(false);
       }
     );
 };
@@ -164,8 +165,8 @@ function Contact() {
               error={messageError}
               helperText={messageError ? "Please enter the message" : ""}
             />
-            <Button type="submit" variant="contained" endIcon={<SendIcon />} disabled={isSending}>
-              {isSending ? "Sending..." : "Send"}
+            <Button type="submit" variant="contained" endIcon={<SendIcon />} disabled={isSending || cooldownTime > 0}>
+              {isSending ? "Sending..." : cooldownTime > 0 ? `Wait ${cooldownTime}s` : "Send"}
             </Button>
           </Box>
         </div>
