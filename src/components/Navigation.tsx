@@ -60,7 +60,7 @@ function Navigation({parentToChild, modeChange, onNavigate, currentPage, section
   };
 
   const handleNavigation = (item: any) => {
-    const [_label, target, type] = item;
+    const [, target, type] = item;
     if (type === 'page') {
       // For page items, just navigate
       onNavigate(target);
