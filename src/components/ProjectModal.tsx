@@ -15,7 +15,12 @@ export default function ProjectModal({ project, onClose }: any) {
 
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape" && !lightboxSrc) {
-        handleClose();
+        setClosing(true);
+        setTimeout(() => {
+          onClose();
+          setClosing(false);
+          setLightboxSrc(null);
+        }, 300); // matches animation
       }
     };
 
@@ -25,7 +30,7 @@ export default function ProjectModal({ project, onClose }: any) {
       document.body.style.overflow = "auto";
       window.removeEventListener("keydown", handleKey);
     };
-  }, [project, lightboxSrc]);
+  }, [project, lightboxSrc, onClose]);
 
   if (!project && !closing) return null;
 

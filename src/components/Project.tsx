@@ -25,11 +25,6 @@ const images_Adventurer = importProjectImages(require.context('../assets/images/
 const images_TowAR = importProjectImages(require.context('../assets/images/TowAR', false, /\.(png|jpe?g|svg|gif)$/));
 const images_NEVR = importProjectImages(require.context('../assets/images/NEVR', false, /\.(png|jpe?g|svg|gif)$/));
 
-type ProjectLink = {
-  name: string;
-  url: string;
-};
-
 function importAll(r: any) {
   return r.keys().map(r);
 }
