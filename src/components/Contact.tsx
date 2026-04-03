@@ -21,6 +21,16 @@ function Contact() {
 
   const form = useRef<HTMLFormElement>();
 
+  // Debug: Check if environment variables are loaded
+  React.useEffect(() => {
+    if (!process.env.REACT_APP_EMAILJS_PUBLIC_KEY) {
+      console.error('REACT_APP_EMAILJS_PUBLIC_KEY is undefined!');
+      console.log('All env vars:', Object.keys(process.env).filter(k => k.includes('EMAILJS')));
+    } else {
+      console.log('EmailJS Public Key loaded successfully');
+    }
+  }, []);
+
   const sendEmail = (e: any) => {
   e.preventDefault();
 
