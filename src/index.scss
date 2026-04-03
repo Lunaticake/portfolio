@@ -38,11 +38,19 @@ h1, h2, h3, h4, h5, strong {
   font-family: "Lato", sans-serif;
 }
 
+button{
+  /*background: #e0e0e0;
+  color: #0d1116;*/
+  background: transparent;
+}
+
 .navigation-bar {
   justify-content: space-between;
   background-color: #0d1116;
+  color: #e0e0e0;
 
   button {
+    background-color: transparent;
     font-size: 1.1rem;
     font-family: "Lato", sans-serif;
     text-transform: initial;
@@ -111,6 +119,16 @@ h1, h2, h3, h4, h5, strong {
   a:hover {
     color: #5000ca;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  }
+
+  /*button {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+  }*/
+
+  .navigation-bar button {
+    color: #0d1116;
+    background-color: transparent;
   }
 
   .navigation-bar svg {

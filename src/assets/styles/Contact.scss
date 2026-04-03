@@ -4,6 +4,47 @@
   margin-right: 5px;
 }
 
+.contact_wrapper .social_icons {
+    display: inline;
+    margin-left: 0.5em;
+    flex-direction: row;
+    gap: 10px;
+    color: white;
+
+    svg {
+        font-size: 1.8em;
+    }
+}
+
+.contact_wrapper .mobile_social_icons {
+    display: none;
+    flex-direction: row;
+    gap: 10px;
+    color: white;
+    margin-top: 10px;
+
+    svg {
+        font-size: 1.8em;
+    }
+}
+
+// Mobile styles for social icons
+@media (max-width: 768px) {
+    .contact_wrapper .social_icons {
+        display: none !important;
+    }
+    
+    .contact_wrapper .mobile_social_icons {
+        display: block !important;
+        margin-top: 10px;
+        
+        a {
+            display: block;
+            margin-bottom: 8px;
+        }
+    }
+}
+
 .contact-form {
   padding-top: 20px;
 
@@ -18,8 +59,17 @@
     color: white;
   }
 
-  fieldset {
+  .MuiOutlinedInput-root {
     background-color: white;
+  }
+
+  .MuiInputBase-input {
+    color: #0d1116 !important;
+    -webkit-text-fill-color: #0d1116 !important;
+  }
+
+  .MuiInputLabel-root {
+    color: #0d1116 !important;
   }
 }
 

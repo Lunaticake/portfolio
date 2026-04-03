@@ -1,0 +1,78 @@
+.imprint-container {
+  display: flex;
+  justify-content: center;  // horizontal centering
+  align-items: center;      // vertical centering
+  min-height: calc(100vh - var(--footer-height, 184px)); // dynamically subtract footer height, fallback to 184px
+  padding: 20px;
+}
+
+.imprint-card {
+  padding: 40px 30px;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.imprint-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.imprint-section {
+  margin-bottom: 30px;
+
+  .name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+
+  .line, .location {
+    font-size: 1rem;
+    margin: 2px 0;
+  }
+}
+
+.contact-section {
+  padding-top: 20px;
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 0.95rem;
+    margin: 4px 0;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Dark mode styles
+.dark-mode {
+  .imprint-card {
+    background-color: #222222;
+  }
+  
+  .contact-section {
+    border-top: 1px solid #444444;
+  }
+}
+
+// Light mode styles
+.light-mode {
+  .imprint-card {
+    background-color: #ffffff;
+  }
+  
+  .contact-section {
+    border-top: 1px solid #e0e0e0;
+  }
+}

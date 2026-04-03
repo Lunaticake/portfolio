@@ -1,6 +1,7 @@
 import React from "react";
-import GitHubIcon from '@mui/icons-material/GitHub';
+//import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Mail';
 import '../assets/styles/Main.scss';
 import avatar from '../assets/images/profile_img.jpg';
 
@@ -15,12 +16,13 @@ function Main() {
         <div className="content">
           <div className="social_icons">
             <a href="https://www.linkedin.com/in/cedric-ferstl/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a href="mailto:cedric.ferstl@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
           </div>
           <h1>Cedric Ferstl</h1>
           <p>Game Developer</p>
-
           <div className="mobile_social_icons">
             <a href="https://www.linkedin.com/in/cedric-ferstl/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a href="mailto:cedric.ferstl@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
           </div>
         </div>
       </div>

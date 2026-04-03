@@ -24,6 +24,31 @@
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
     cursor: pointer;
 }
+
+.projects-toggle {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center; 
+
+  button {
+    //color: black;
+    font-weight: bold;
+    border: none;
+    padding: 0.83rem 1.66rem;
+    font-size: 1.05rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    border-style: solid;
+    border-color: currentColor;
+
+    /*&:hover {
+      background: white;
+      transform: scale(1.05);
+    }*/
+  }
+}
   
 .zoom {
     border-radius: 5px;

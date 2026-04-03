@@ -9,14 +9,23 @@ export default function ProjectModal({ project, onClose }: any) {
 
   React.useEffect(() => {
     if (project) {
-      setClosing(false); // play opening animation
-      document.body.style.overflow = "hidden"; // disable background scroll
+      setClosing(false);
+      document.body.style.overflow = "hidden";
     }
 
-    return () => {
-      document.body.style.overflow = "auto"; // restore scroll when modal closes
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && !lightboxSrc) {
+        handleClose();
+      }
     };
-  }, [project]);
+
+    window.addEventListener("keydown", handleKey);
+
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", handleKey);
+    };
+  }, [project, lightboxSrc]);
 
   if (!project && !closing) return null;
 
@@ -79,8 +88,40 @@ export default function ProjectModal({ project, onClose }: any) {
           {/* Right: description */}
           <div className="modalRight">
             <ReactMarkdown>{project.description}</ReactMarkdown>
-          </div>
 
+            {project.roles && project.roles.length > 0 && (
+              <p><strong>My Roles: </strong> {project.roles.join(", ")}</p>
+            )}
+
+            {project.tech && project.tech.length > 0 && (
+              <p><strong>Used Technologies: </strong> {project.tech.join(", ")}</p>
+            )}
+
+            {project.contributions && project.contributions.length > 0 && (
+            <div>
+              <strong>Key Contributions:</strong>
+              <ul>
+                {project.contributions.map((role: string, index: number) => (
+                  <li key={index}>{role}</li>
+                ))}
+              </ul>
+            </div>
+            )}
+
+            {project.links && project.links.length > 0 && (
+              <p>
+                <strong>Relevant Links: </strong>
+                {project.links.map((link: { name: string; url: string }, index: number) => (
+                  <span key={link.url}>
+                    <a href={link.url} target="_blank" rel="noopener noreferrer">
+                      {link.name}
+                    </a>
+                    {index < project.links.length - 1 && ", "}
+                  </span>
+                ))}
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -91,15 +91,24 @@
 }
 
 /* Close button */
-.closeButton {
-  background: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  z-index: 10;
+.modalContent {
+  .closeButton {
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+  }
+}
+
+.modalContent .modalRight a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .slideIn {

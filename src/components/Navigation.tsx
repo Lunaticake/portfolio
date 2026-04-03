@@ -17,9 +17,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
-const navItems = [/*['Expertise', 'expertise'], ['History', 'history'], */['Projects', 'projects'], ['Contact', 'contact']];
+const navItems = [
+  ['Home', 'home', 'page'],
+  /*['Expertise', 'expertise'], ['History', 'history'],*/ 
+  ['Projects', 'projects', 'scroll'], 
+  ['Contact', 'contact', 'scroll'],
+  ['Imprint', 'imprint', 'page']
+];
 
-function Navigation({parentToChild, modeChange}: any) {
+function Navigation({parentToChild, modeChange, onNavigate, currentPage, sectionRef}: any) {
 
   const {mode} = parentToChild;
 
@@ -47,13 +53,27 @@ function Navigation({parentToChild, modeChange}: any) {
   }, []);
 
   const scrollToSection = (section: string) => {
-    console.log(section)
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleNavigation = (item: any) => {
+    const [label, target, type] = item;
+    if (type === 'page') {
+      // For page items, just navigate
+      onNavigate(target);
     } else {
-      console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
+      // For scroll items
+      if (currentPage === 'home') {
+        // If already on home page, scroll immediately
+        scrollToSection(target);
+      } else {
+        // If on another page, navigate to home and set section ref for deferred scrolling
+        sectionRef.current = target;
+        onNavigate('home');
+      }
     }
   };
 
@@ -64,7 +84,7 @@ function Navigation({parentToChild, modeChange}: any) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item[0]} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToSection(item[1])}>
+            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => handleNavigation(item)}>
               <ListItemText primary={item[0]} />
             </ListItemButton>
           </ListItem>
@@ -94,7 +114,7 @@ function Navigation({parentToChild, modeChange}: any) {
           )}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
+              <Button key={item[0]} onClick={() => handleNavigation(item)} sx={{ color: '#fff' }}>
                 {item[0]}
               </Button>
             ))}
