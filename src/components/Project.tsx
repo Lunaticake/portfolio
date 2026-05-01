@@ -84,6 +84,7 @@ function Project() {
         "Performed debugging, refactoring, and feature integration across gameplay, UI, and physics systems within Unreal Engine"
       ],
       images: images_Jected,
+      embed: "https://www.youtube.com/embed/FuWb5KMiUTM?si=H4RCtL8xZM01rp2O",
       links: [
         {name: "Steam", url: "https://store.steampowered.com/app/1366850/Jected__Rivals/"},
         {name: "Official Game Site", url: "https://jected.thqnordic.com/"}

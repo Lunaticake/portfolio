@@ -6,6 +6,8 @@ import '../assets/styles/Main.scss';
 import avatar from '../assets/images/profile_img.jpg';
 
 function Main() {
+  const URL_LINKEDIN = "https://www.linkedin.com/in/cedric-ferstl/";
+  const URL_EMAIL = "mailto:cedric.ferstl@gmail.com";
 
   return (
     <div className="container">
@@ -15,14 +17,14 @@ function Main() {
         </div>
         <div className="content">
           <div className="social_icons">
-            <a href="https://www.linkedin.com/in/cedric-ferstl/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
-            <a href="mailto:cedric.ferstl@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
+            <a href={URL_LINKEDIN} target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a href={URL_EMAIL} target="_blank" rel="noreferrer"><EmailIcon/></a>
           </div>
           <h1>Cedric Ferstl</h1>
           <p>Game Developer</p>
           <div className="mobile_social_icons">
-            <a href="https://www.linkedin.com/in/cedric-ferstl/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
-            <a href="mailto:cedric.ferstl@gmail.com" target="_blank" rel="noreferrer"><EmailIcon/></a>
+            <a href={URL_LINKEDIN} target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a href={URL_EMAIL} target="_blank" rel="noreferrer"><EmailIcon/></a>
           </div>
         </div>
       </div>
