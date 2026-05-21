@@ -13,7 +13,9 @@ import trailer_TowAR from '../assets/videos/trailer_TowAR.mp4';
 import trailer_Adventurer from '../assets/videos/trailer_Adventurer.mp4';
 
 //Temp Imports
+/*
 import thumbnail_TBA from '../assets/images/thumb_TBA.png';
+*/
 
 //Video Embeds
 const trailer_Jected = "https://www.youtube.com/embed/FuWb5KMiUTM?si=H4RCtL8xZM01rp2O";
