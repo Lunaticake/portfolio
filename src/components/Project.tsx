@@ -8,11 +8,15 @@ import trailer_Flipside from '../assets/videos/trailer_Flipside.mp4';
 import trailer_Vibes from '../assets/videos/trailer_Vibes.mp4';
 import trailer_Golfking from '../assets/videos/trailer_Golfking.mp4';
 import trailer_Branded from '../assets/videos/trailer_Branded.mp4';
+import trailer_NEVR from '../assets/videos/trailer_NEVR.mp4';
 import trailer_TowAR from '../assets/videos/trailer_TowAR.mp4';
 import trailer_Adventurer from '../assets/videos/trailer_Adventurer.mp4';
 
 //Temp Imports
 import thumbnail_TBA from '../assets/images/thumb_TBA.png';
+
+//Video Embeds
+const trailer_Jected = "https://www.youtube.com/embed/FuWb5KMiUTM?si=H4RCtL8xZM01rp2O";
 
 //Image Imports
 const images_TakingRoot = importProjectImages(require.context('../assets/images/TakingRoot', false, /\.(png|jpe?g|svg|gif)$/));
@@ -24,6 +28,7 @@ const images_Branded = importProjectImages(require.context('../assets/images/Bra
 const images_Adventurer = importProjectImages(require.context('../assets/images/Adventurer', false, /\.(png|jpe?g|svg|gif)$/));
 const images_TowAR = importProjectImages(require.context('../assets/images/TowAR', false, /\.(png|jpe?g|svg|gif)$/));
 const images_NEVR = importProjectImages(require.context('../assets/images/NEVR', false, /\.(png|jpe?g|svg|gif)$/));
+const images_ExPend = importProjectImages(require.context('../assets/images/ExPend', false, /\.(png|jpe?g|svg|gif)$/));
 
 function importAll(r: any) {
   return r.keys().map(r);
@@ -84,7 +89,7 @@ function Project() {
         "Performed debugging, refactoring, and feature integration across gameplay, UI, and physics systems within Unreal Engine"
       ],
       images: images_Jected,
-      embed: "https://www.youtube.com/embed/FuWb5KMiUTM?si=H4RCtL8xZM01rp2O",
+      embed: trailer_Jected,
       links: [
         {name: "Steam", url: "https://store.steampowered.com/app/1366850/Jected__Rivals/"},
         {name: "Official Game Site", url: "https://jected.thqnordic.com/"}
@@ -157,7 +162,8 @@ function Project() {
         "Implemented data logging systems (path tracking, time measurement) to support quantitative user study analysis.",
         "Identified and resolved technical issues related to shaders, VR setup, and build stability for experimental deployment."
       ],
-      images: images_NEVR
+      images: images_NEVR,
+      video: trailer_NEVR
     },
 
     {
@@ -174,7 +180,7 @@ function Project() {
         "Developed a 2D physics system with basic collision detection (AABB, Circle), resolution (restitution, drag), and an observer-based collision event system",
         "Implemented A* pathfinding and a tile-based navigation mesh for AI movement support"
       ],
-      images: [thumbnail_TBA]
+      images: images_ExPend,
     },
 
     {
