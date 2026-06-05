@@ -67,6 +67,23 @@ export default function ProjectModal({ project, onClose }: any) {
               </video>
             )}
 
+            {project.embed && (
+              <iframe className="modalVideo" 
+                src={project.embed}
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; 
+                autoplay; 
+                clipboard-write; 
+                encrypted-media; 
+                gyroscope; 
+                picture-in-picture; 
+                web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen>
+              </iframe>
+            )}
+
             {project.images && project.images.length > 0 && (
             <div className="modalImages">
                 {project.images.map((img: string, i: number) => (

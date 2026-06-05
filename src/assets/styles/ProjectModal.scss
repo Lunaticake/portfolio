@@ -60,6 +60,7 @@
 .modalVideo {
   width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9;
   border-radius: 5px;
   flex-shrink: 0;
 }
