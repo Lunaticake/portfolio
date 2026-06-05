@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import ReactMarkdown from "react-markdown";
 import ProjectModal from "../components/ProjectModal";
 import '../assets/styles/Project.scss';
 
@@ -52,7 +53,7 @@ function Project() {
 
     {
       title: "Taking Root",
-      abstract: "",
+      abstract: "**Perspective-based puzzle game** developed at the FH Salzburg using **C#** and **Unity3D**.",
       description: "**Taking Root** is a perspective-based puzzle adventure game made by a team of **three programmers** and **five artists** in which the player, taking the role of a stone creature, is tasked with fleeing their home together with their plant friend.",
       roles: ["Gameplay Programmer", "Game Design Lead", "Technical Artist"],
       tech: ["Unity", "Shader Graph", "C#", "HLSL", "Git"],
@@ -72,7 +73,7 @@ function Project() {
 
     {
       title: "Jected - Rivals",
-      abstract: "Arcade racing game developed at Pow Wow Entertainment using Unreal Engine and C++.",
+      abstract: "**Arcade racing game** developed at Pow Wow Entertainment using **C++** and **Unreal Engine**.",
       description: "**Jected - Rivals** is a battle royale arcade racing game developed by **Pow Wow Entertainment** in which 18 players compete against each other in a multitude of different extreme sport and vehicle-based disciplines until there is only one player left standing. I worked on this game during a **4.5 months long internship** as part of the 3C team, which stands for \"Character, Control, Camera\".",
       roles: ["Gameplay Programmer"],
       tech: ["Unreal Engine", "C++", "Perforce"],
@@ -92,7 +93,7 @@ function Project() {
 
     {
       title: "On The Flipside",
-      abstract: "Unity puzzle game developed at FH Salzburg.",
+      abstract: "**Puzzle game** with \"mirrored world\" mechanic developed at the FH Salzburg using **C#** and **Unity3D**.",
       description: "**On The Flipside** is a 2.5D puzzle game made in a team of **three programmers**. The core mechanic in this game is the ability to swap between the normal world and the \"Flipside\": A mirrored, slightly altered version of the normal world.",
       roles: ["Gameplay Programmer", "Gameplay Designer", "Shader Programmer"],
       tech: ["Unity", "Shader Graph", "C#", "HLSL", "Git"],
@@ -110,7 +111,7 @@ function Project() {
 
     {
       title: "King of the Golf",
-      abstract: "PvP golfing game built in a custom C++ engine.",
+      abstract: "**PvP golfing game** developed at the FH Salzburg using a **custom C++ engine**.",
       description: "**King of the Golf** is a (local) multiplayer, competitive party game made in a team of **two programmers** and programmed in our own custom engine. The goal is to have the highest score of all players at the end of a round by hitting your golf ball into a periodically moving target area and have it stay there the longest, while keeping other players from entering.",
       roles: ["Gameplay Programmer", "Engine Programmer", "Gameplay Designer"],
       tech: ["ExPend (custom engine)", "C++", "SFML", "Tiled", "Git"],
@@ -128,7 +129,7 @@ function Project() {
 
     {
       title: "Branded By Death",
-      abstract: "Gladiator-themed combat game built with MonoGame.",
+      abstract: "Gladiator-themed **2D combat game** developed at the FH Salzburg using **C#** and the **MonoGame** framework.",
       description: "**Branded By Death** is an action combat 2D-game made during the first year of my studies as a **solo project**. In this game, the player takes on the role of a gladiatior fighting in a colosseum and needs to defeat his opponent in a duel through a series of well-timed combat actions.",
       roles: ["Solo Developer"],
       tech: ["C#", "MonoGame", "Git"],
@@ -145,7 +146,7 @@ function Project() {
 
     {
       title: "Non-Euclidean Virtual Reality (NEVR)",
-      abstract: "Bachelor thesis project generating a labyrinth in hyperbolic space.",
+      abstract: "**Non-Euclidean VR demo** developed for my bachelor's thesis using **C#**, **Unity3D** and the **HyperEngine** framework.",
       description: "**NEVR (Non-Euclidean Virtual Reality)** is a virtual reality project I made for my **bachelor's thesis**, in which subjects had to make their way through two different labyrinths (one being Euclidean and the other hyperbolic) in search for an item they had to then return. It was developed to study how non-Euclidean spaces affect player orientation, navigation and spatial understanding and to ultimately answer the question if these unconvential spaces are practical for use in video games.",
       roles: ["Solo Developer"],
       tech: ["Unity", "HyperEngine", "Oculus SDK", "Git"],
@@ -161,7 +162,7 @@ function Project() {
 
     {
       title: "ExPend Engine",
-      abstract: "A 2D game engine programmed in C++.",
+      abstract: "Custom-built **2D game engine** programmed using **C++**.",
       description: "The **ExPend Engine** is a 2D game engine co-developed in a team of **two programmers** at the FH Salzburg. It was subsequently used to create the game \"King of the Golf\".",
       roles: ["Engine Programmer"],
       tech: ["C++", "SFML", "Tiled", "Git"],
@@ -178,7 +179,7 @@ function Project() {
 
     {
       title: "TowAR",
-      abstract: "Augmented Reality tower defense using physical markers.",
+      abstract: "**AR tower defense game demo** made using **C#**, **Unity3D** and the **Vuforia Engine SDK**.",
       description: "**TowAR** is an AR tower defense game demo made in a team of **three programmers**. The goal of the game is to defend their base by placing physical markers which spawn towers and orienting them in a way so that they shoot the enemies on screen.",
       roles: ["AR Developer (Systems Integration)"],
       tech: ["Unity", "C#", "Vuforia Engine SDK", "Git"],
@@ -194,7 +195,7 @@ function Project() {
 
     {
       title: "Deadly Vibes",
-      abstract: "Rhythm-based combat game created during a GameJam.",
+      abstract: "Short **rhythm game** created during a GameJam using **C#** and **Unity3D**.",
       description: "**Deadly Vibes** is a short 2D rhythm game made in a team of **two programmers** during a GameJam with the theme \"One Finger\". The goal of the game is to defeat an opponent by correctly hitting timed notes in succession to unleash attacks.",
       roles: ["Gameplay Programmer", "Gameplay Designer"],
       tech: ["Unity", "C#", "Git"],
@@ -211,7 +212,7 @@ function Project() {
 
     {
       title: "Adventures of an Adventurer",
-      abstract: "2D narrative RPG developed at the HTL Leonding.",
+      abstract: "**2D narrative-driven RPG** developed at the HTL Leonding using **C#** and **Unity Engine**.",
       description: "",
       roles: [],
       tech: [],
@@ -248,7 +249,7 @@ function Project() {
 
             <h2>{project.title}</h2>
 
-            <p>{project.abstract}</p>
+            <ReactMarkdown>{project.abstract}</ReactMarkdown>
 
           </div>
         ))}

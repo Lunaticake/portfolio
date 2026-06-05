@@ -92,6 +92,20 @@ export default function ProjectModal({ project, onClose }: any) {
 
           {/* Right: description */}
           <div className="modalRight">
+            {project.links && project.links.length > 0 && (
+              <p>
+                <strong>Check out the game here: </strong>
+                {project.links.map((link: { name: string; url: string }, index: number) => (
+                  <span key={link.url}>
+                    <a href={link.url} target="_blank" rel="noopener noreferrer">
+                      {link.name}
+                    </a>
+                    {index < project.links.length - 1 && ", "}
+                  </span>
+                ))}
+              </p>
+            )}
+
             <ReactMarkdown>{project.description}</ReactMarkdown>
 
             {project.roles && project.roles.length > 0 && (
@@ -111,20 +125,6 @@ export default function ProjectModal({ project, onClose }: any) {
                 ))}
               </ul>
             </div>
-            )}
-
-            {project.links && project.links.length > 0 && (
-              <p>
-                <strong>Relevant Links: </strong>
-                {project.links.map((link: { name: string; url: string }, index: number) => (
-                  <span key={link.url}>
-                    <a href={link.url} target="_blank" rel="noopener noreferrer">
-                      {link.name}
-                    </a>
-                    {index < project.links.length - 1 && ", "}
-                  </span>
-                ))}
-              </p>
             )}
           </div>
         </div>
