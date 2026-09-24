@@ -223,8 +223,8 @@ function Project() {
       title: "Adventures of an Adventurer",
       abstract: "**2D narrative-driven RPG** developed at the HTL Leonding using **C#** and **Unity Engine**.",
       description: "",
-      roles: [],
-      tech: [],
+      roles: ["Gameplay Programmer", "Game Designer"],
+      tech: ["Unity", "C#", "Photon", "Git"],
       contributions: [],
       images: images_Adventurer,
       video: trailer_Adventurer
